@@ -17,7 +17,7 @@ import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
-import com.android.internal.util.cm.NavigationRingHelpers;
+import com.android.internal.util.aokp.NavRingHelpers;
 import com.android.internal.util.cm.TorchConstants;
 
 public class KeyHandler implements DeviceKeyHandler {
