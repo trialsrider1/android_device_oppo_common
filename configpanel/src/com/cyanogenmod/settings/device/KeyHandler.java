@@ -65,16 +65,7 @@ public class KeyHandler implements DeviceKeyHandler {
             consumed = true;
             break;
         case GESTURE_V_SCANCODE:
-            if (NavigationRingHelpers.isTorchAvailable(mContext)) {
-                Intent torchIntent = new Intent(TorchConstants.ACTION_TOGGLE_STATE);
-                mContext.sendBroadcast(torchIntent);
-                if (!isTorchActive()) {
-                    wakeUpDismissKeyguard();
-                    Intent i = TorchConstants.INTENT_LAUNCH_APP;
-                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    mContext.startActivity(i);
-                }
-            }
+            
             consumed = true;
             break;
         case GESTURE_LTR_SCANCODE:
